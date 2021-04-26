@@ -15,6 +15,8 @@ public enum PanModalBackgroundInteraction: Equatable {
 
     /** Touches are forwarded to the lower window (In most cases it would be the application main window that will handle it */
     case forward
+    
+    case mapForward
 
      /** Absorbs touches. The modal does nothing (Swallows the touch) */
     case none

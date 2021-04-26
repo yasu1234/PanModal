@@ -118,6 +118,12 @@ open class PanModalPresentationController: UIPresentationController {
                     return self?.presentingViewController.view.hitTest(point, with: event)
                     
                 }
+                
+            case .mapForward:
+                view.hitTestHandler = { [weak self] (point, event) in
+                    return self?.presentingViewController.presentingViewController?.view.hitTest(point, with: event)
+                    
+                }
 
             case .dismiss:
                 view.didTap = { [weak self] _ in
